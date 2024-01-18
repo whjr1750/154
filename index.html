@@ -11,13 +11,14 @@
   </head>
   <body>
     <a-scene>
+      <a-entity id="look" look-controls camera position="0 2 20"></a-entity>
       <!---Assets-->
-      <a-a-assets>
+      <a-assets timeout="10000">
       
 
         <a-asset-item
           id="treasure"
-          src=./Assets/treasure_chest/scene.gltf"
+          src="./Assets/treasure_chest/scene.gltf"
         ></a-asset-item>
         <a-asset-item
           id="xyz"
@@ -27,7 +28,7 @@
           id="scuba_driver"
           src="./Assets/scuba_diver_-_twinset_blue_suit/scene.gltf"
         ></a-asset-item>
-      </a-a-assets>
+      </a-assets>
 
       <!-- Sky -->
       <a-sky
@@ -50,22 +51,8 @@
         <!--Trasures-->
         <a-entity
           gltf-model="#treasure"
-          scale="15 15 15"
+          scale="1 1 1"
           position="0 -30 -40"
-          rotation="0 90 0"
-        ></a-entity>
-
-        <a-entity
-          gltf-model="#treasure"
-          scale="15 15 15"
-          position="10 -30 -40"
-          rotation="0 90 0"
-        ></a-entity>
-
-        <a-entity
-          gltf-model="#treasure"
-          scale="15 15 15"
-          position="-15 -30 -40"
           rotation="0 90 0"
         ></a-entity>
 
@@ -87,7 +74,7 @@
       <!--Scuba Driver-->
       <a-entity
         gltf-model="#scuba_driver"
-        scale="0.1 0.1 0.1"
+        scale="15 15 15"
         position="5 0 15"
         rotation="0 90 -20"
         driver-rotation-reader
